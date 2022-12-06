@@ -23,10 +23,11 @@ java -jar xmlParser.jar
 
 ### API list 
 
-##### Save xml data
+#### Parse & Save XML data
  
 - MethodType: Post
 - URL: http://localhost:8080/iapps/epaper
+- Body: Upload XML in request body with variable name "xmlFile"
 - Response: 
 ```json 
 {
@@ -44,7 +45,10 @@ java -jar xmlParser.jar
     "error": false
 }
 ```
-##### Find all
+![Save API Image](https://github.com/psabuwala/xml-parser/blob/master/Image/saveData.PNG)
+
+
+#### Find all
 - MethodType: Post
 - URL: http://localhost:8080/iapps/epaper?pageNo=1&sortColumn=width&sortOrder=DESC&search=abb
 - Response: 
@@ -74,7 +78,10 @@ Description:
 > If sortColumn value is null then it will sort based on default value newsPaperName
 > Searching is working on "newsPaperName"
 
-##### Find by Id
+![FindAll API Image](https://github.com/psabuwala/xml-parser/blob/master/Image/getAll.PNG)
+
+
+#### Get by Id
 - MethodType: Post
 - URL: http://localhost:8080/iapps/epaper?pageNo=1&sortColumn=width&sortOrder=DESC&search=abb
 - Response: 
@@ -94,3 +101,6 @@ Description:
     "error": false
 }
 ```
+![GetById API Image](https://github.com/psabuwala/xml-parser/blob/master/Image/GetById.PNG)
+
+
