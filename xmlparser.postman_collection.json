@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "694b87eb-9a0b-4096-bdeb-d3479bf73f73",
+		"name": "IApps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "99218"
+	},
+	"item": [
+		{
+			"name": "SaveEPaper",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "xmlFile",
+							"type": "file",
+							"src": "/D:/SSB/TtvS/iApps/input.xml"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/iapps/epaper",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"iapps",
+						"epaper"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllPaper",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/iapps/epaper?pageNo=3&sortColumn=width&sortOrder=DESC&search=paper",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"iapps",
+						"epaper"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "3"
+						},
+						{
+							"key": "sortColumn",
+							"value": "width"
+						},
+						{
+							"key": "sortOrder",
+							"value": "DESC"
+						},
+						{
+							"key": "search",
+							"value": "paper"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/iapps/epaper/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"iapps",
+						"epaper",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
